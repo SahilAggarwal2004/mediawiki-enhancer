@@ -1,5 +1,5 @@
 import { tryCatchAsync } from "utility-kit";
-import { waitForStableElement } from "./utils/dom";
+import { waitForStableElement } from "./lib/dom";
 import { Nullable } from "./types";
 
 function assignFileToInput(input: HTMLInputElement, file: File) {
