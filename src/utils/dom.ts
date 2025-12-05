@@ -27,7 +27,7 @@ export async function waitForStableElement<T extends HTMLElement>(selector: stri
         }, settleMs);
       }
     });
-    observer.observe(root, { childList: true, subtree: true });
+    observer.observe(root, { childList: true, subtree: true, attributes: true, attributeFilter: ["disabled", "aria-disabled"] });
 
     const timeoutTimer = setTimeout(() => {
       observer.disconnect();
